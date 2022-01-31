@@ -19,7 +19,7 @@ rule all:
 #    """
 
 
-###------###
+#####------######
 ##blocks to download multiple samples in single rule
 # list sample names & download URLs.
 sample_links = { "SRR2584403_1": "https://osf.io/6jx7z/download",
@@ -44,7 +44,7 @@ rule download_reads:
         curl -L {params.download_link} -o {output}
         """
 
-###-------###
+######-------######
 
 rule download_genome:
     conda: "env-wget.yml"
